@@ -1,0 +1,36 @@
+---
+// Inline script handles toggle — no framework needed
+---
+<button
+  id="theme-toggle"
+  type="button"
+  class="px-3 py-1.5 text-sm rounded border border-border-default text-text-secondary hover:bg-surface-hover transition-colors cursor-pointer"
+  aria-label="Toggle theme"
+>
+  <span id="theme-label-dark" class="hidden">Dark</span>
+  <span id="theme-label-light" class="hidden">Light</span>
+</button>
+
+<script is:inline>
+(function() {
+  const stored = localStorage.getItem('tbox-theme')
+  const theme = stored === 'light' ? 'light' : 'dark'
+  document.documentElement.setAttribute('data-theme', theme)
+  updateLabels(theme)
+
+  document.getElementById('theme-toggle')?.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme')
+    const next = current === 'dark' ? 'light' : 'dark'
+    document.documentElement.setAttribute('data-theme', next)
+    localStorage.setItem('tbox-theme', next)
+    updateLabels(next)
+  })
+
+  function updateLabels(t) {
+    const dark = document.getElementById('theme-label-dark')
+    const light = document.getElementById('theme-label-light')
+    if (dark) dark.classList.toggle('hidden', t !== 'light')
+    if (light) light.classList.toggle('hidden', t !== 'dark')
+  }
+})()
+</script>
