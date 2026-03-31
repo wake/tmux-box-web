@@ -1,0 +1,53 @@
+---
+const features = [
+  {
+    titleKey: 'features.sessions.title',
+    titleDefault: 'Cross-Machine Sessions',
+    descKey: 'features.sessions.desc',
+    descDefault: 'Install the daemon on any machine, add it as a host, and its tmux sessions appear as local tabs — complete with full PTY relay and automatic session discovery.',
+    icon: '⌘',
+  },
+  {
+    titleKey: 'features.status.title',
+    titleDefault: 'Agent Status at a Glance',
+    descKey: 'features.status.desc',
+    descDefault: 'Tab indicators show each agent\'s state — running, waiting for input, or errored. Unread badges and desktop notifications keep you informed without switching tabs.',
+    icon: '●',
+  },
+  {
+    titleKey: 'features.reconnect.title',
+    titleDefault: 'Seamless Reconnection',
+    descKey: 'features.reconnect.desc',
+    descDefault: 'Built on tmux. Connections drop, pages reload, laptops sleep — open the page and every tab, split, and workflow is exactly where you left it.',
+    icon: '↻',
+  },
+  {
+    titleKey: 'features.upload.title',
+    titleDefault: 'Drag Files to Remote Agents',
+    descKey: 'features.upload.desc',
+    descDefault: 'Drop an image or document onto the terminal. It uploads to the remote host and injects the file path into the active agent session — cross-machine file sharing in one gesture.',
+    icon: '⇪',
+  },
+  {
+    titleKey: 'features.theme.title',
+    titleDefault: 'Fully Themeable',
+    descKey: 'features.theme.desc',
+    descDefault: '21 semantic design tokens, 4 built-in themes, a live theme editor with import/export, and full bilingual support with custom locale creation.',
+    icon: '◐',
+  },
+]
+---
+<section class="px-6 py-24 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-bold text-center mb-16" data-i18n="features.title">Features</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {features.map((f) => (
+      <div class="p-6 rounded-xl bg-surface-secondary border border-border-subtle">
+        <div class="text-2xl mb-4 w-10 h-10 rounded-lg bg-accent-muted flex items-center justify-center text-accent">
+          {f.icon}
+        </div>
+        <h3 class="text-lg font-semibold mb-2" data-i18n={f.titleKey}>{f.titleDefault}</h3>
+        <p class="text-text-secondary text-sm leading-relaxed" data-i18n={f.descKey}>{f.descDefault}</p>
+      </div>
+    ))}
+  </div>
+</section>

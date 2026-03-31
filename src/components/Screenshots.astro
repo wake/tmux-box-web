@@ -1,0 +1,25 @@
+---
+const images = [
+  {
+    src: '/screenshots/demo-connected.png',
+    alt: 'tmux-box connected — multi-tab terminal with session panel and active connections',
+  },
+  {
+    src: '/screenshots/demo-disconnected.png',
+    alt: 'tmux-box reconnecting — automatic session recovery after connection drop',
+  },
+]
+---
+<section class="px-6 py-24 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-bold text-center mb-16" data-i18n="screenshots.title">See It in Action</h2>
+  <div class="space-y-8">
+    {images.map((img) => (
+      <img
+        src={img.src}
+        alt={img.alt}
+        class="rounded-xl border border-border-subtle shadow-lg mx-auto max-w-full"
+        loading="lazy"
+      />
+    ))}
+  </div>
+</section>

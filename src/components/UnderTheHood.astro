@@ -1,0 +1,39 @@
+---
+const items = [
+  {
+    titleKey: 'underTheHood.daemon.title',
+    titleDefault: 'Go Daemon',
+    descKey: 'underTheHood.daemon.desc',
+    descDefault: 'Modular architecture with 5 pluggable modules, SQLite WAL storage, WebSocket pub-sub, token authentication.',
+  },
+  {
+    titleKey: 'underTheHood.spa.title',
+    titleDefault: 'React SPA',
+    descKey: 'underTheHood.spa.desc',
+    descDefault: 'React 19, Zustand state management, xterm.js 6 terminal emulation, Tailwind CSS 4.',
+  },
+  {
+    titleKey: 'underTheHood.electron.title',
+    titleDefault: 'Electron Shell',
+    descKey: 'underTheHood.electron.desc',
+    descDefault: 'Multi-window with tear-off/merge, system tray, browser pane memory management, native keyboard shortcuts.',
+  },
+  {
+    titleKey: 'underTheHood.hooks.title',
+    titleDefault: 'Hook System',
+    descKey: 'underTheHood.hooks.desc',
+    descDefault: '9 Claude Code lifecycle events feed real-time status indicators, zero polling.',
+  },
+]
+---
+<section class="px-6 py-24 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-bold text-center mb-16" data-i18n="underTheHood.title">Under the Hood</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {items.map((item) => (
+      <div class="p-6 rounded-xl border border-border-subtle bg-surface-secondary">
+        <h3 class="text-base font-semibold mb-2 text-accent" data-i18n={item.titleKey}>{item.titleDefault}</h3>
+        <p class="text-text-secondary text-sm leading-relaxed" data-i18n={item.descKey}>{item.descDefault}</p>
+      </div>
+    ))}
+  </div>
+</section>

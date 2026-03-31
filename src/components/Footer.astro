@@ -1,0 +1,32 @@
+---
+import ThemeToggle from './ThemeToggle.astro'
+import LangToggle from './LangToggle.astro'
+---
+<footer class="px-6 py-12 border-t border-border-subtle">
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-4">
+      <a
+        href="/app"
+        class="px-5 py-2 rounded-lg bg-accent text-text-inverse font-medium hover:bg-accent-hover transition-colors text-sm"
+        data-i18n="footer.openApp"
+      >
+        Open App
+      </a>
+      <a
+        href="https://github.com/wake/tmux-box"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-text-secondary hover:text-text-primary transition-colors text-sm"
+      >
+        GitHub
+      </a>
+    </div>
+    <div class="flex items-center gap-3">
+      <span class="text-text-muted text-xs">
+        <span data-i18n="footer.version">Version</span> 1.0.0-alpha.37
+      </span>
+      <ThemeToggle />
+      <LangToggle />
+    </div>
+  </div>
+</footer>

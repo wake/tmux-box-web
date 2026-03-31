@@ -1,0 +1,39 @@
+---
+const steps = [
+  {
+    num: '1',
+    titleKey: 'howItWorks.step1.title',
+    titleDefault: 'Install',
+    descKey: 'howItWorks.step1.desc',
+    descDefault: 'Single Go binary. tbox serve starts the daemon. tbox setup wires up Claude Code hooks.',
+  },
+  {
+    num: '2',
+    titleKey: 'howItWorks.step2.title',
+    titleDefault: 'Add Hosts',
+    descKey: 'howItWorks.step2.desc',
+    descDefault: 'Point the web UI at your daemon address. Each host auto-discovers its tmux sessions.',
+  },
+  {
+    num: '3',
+    titleKey: 'howItWorks.step3.title',
+    titleDefault: 'Work',
+    descKey: 'howItWorks.step3.desc',
+    descDefault: 'Tabs open. Agents run. Notifications arrive. Drag files across machines. Pick up on any device.',
+  },
+]
+---
+<section class="px-6 py-24 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-bold text-center mb-16" data-i18n="howItWorks.title">How It Works</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {steps.map((s) => (
+      <div class="text-center">
+        <div class="w-12 h-12 rounded-full bg-accent text-text-inverse font-bold text-xl flex items-center justify-center mx-auto mb-4">
+          {s.num}
+        </div>
+        <h3 class="text-lg font-semibold mb-2" data-i18n={s.titleKey}>{s.titleDefault}</h3>
+        <p class="text-text-secondary text-sm leading-relaxed" data-i18n={s.descKey}>{s.descDefault}</p>
+      </div>
+    ))}
+  </div>
+</section>

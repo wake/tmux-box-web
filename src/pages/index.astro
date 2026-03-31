@@ -1,12 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import ThemeToggle from '../components/ThemeToggle.astro'
-import LangToggle from '../components/LangToggle.astro'
+import Hero from '../components/Hero.astro'
+import Features from '../components/Features.astro'
+import HowItWorks from '../components/HowItWorks.astro'
+import Screenshots from '../components/Screenshots.astro'
+import UnderTheHood from '../components/UnderTheHood.astro'
+import Footer from '../components/Footer.astro'
 ---
 <BaseLayout title="tmux-box" description="A tmux-based workspace for the AI agent era.">
-  <div class="min-h-screen flex items-center justify-center gap-4">
-    <p class="text-text-secondary">tmux-box — scaffolding complete</p>
-    <ThemeToggle />
-    <LangToggle />
-  </div>
+  <main>
+    <Hero />
+    <Features />
+    <HowItWorks />
+    <Screenshots />
+    <UnderTheHood />
+  </main>
+  <Footer />
 </BaseLayout>
