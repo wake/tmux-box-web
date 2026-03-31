@@ -1,0 +1,46 @@
+{
+  "hero.tagline": "Tame your AI terminals.",
+  "hero.subtitle": "A tmux-based workspace for the AI agent era — manage sessions across machines, track agent status at a glance, and never lose context when connections drop.",
+  "hero.cta.app": "Open App",
+  "hero.cta.github": "GitHub",
+
+  "features.title": "Features",
+  "features.sessions.title": "Cross-Machine Sessions",
+  "features.sessions.desc": "Install the daemon on any machine, add it as a host, and its tmux sessions appear as local tabs — complete with full PTY relay and automatic session discovery.",
+  "features.status.title": "Agent Status at a Glance",
+  "features.status.desc": "Tab indicators show each agent's state — running, waiting for input, or errored. Unread badges and desktop notifications keep you informed without switching tabs.",
+  "features.reconnect.title": "Seamless Reconnection",
+  "features.reconnect.desc": "Built on tmux. Connections drop, pages reload, laptops sleep — open the page and every tab, split, and workflow is exactly where you left it.",
+  "features.upload.title": "Drag Files to Remote Agents",
+  "features.upload.desc": "Drop an image or document onto the terminal. It uploads to the remote host and injects the file path into the active agent session — cross-machine file sharing in one gesture.",
+  "features.theme.title": "Fully Themeable",
+  "features.theme.desc": "21 semantic design tokens, 4 built-in themes, a live theme editor with import/export, and full bilingual support with custom locale creation.",
+
+  "howItWorks.title": "How It Works",
+  "howItWorks.step1.title": "Install",
+  "howItWorks.step1.desc": "Single Go binary. tbox serve starts the daemon. tbox setup wires up Claude Code hooks.",
+  "howItWorks.step2.title": "Add Hosts",
+  "howItWorks.step2.desc": "Point the web UI at your daemon address. Each host auto-discovers its tmux sessions.",
+  "howItWorks.step3.title": "Work",
+  "howItWorks.step3.desc": "Tabs open. Agents run. Notifications arrive. Drag files across machines. Pick up on any device.",
+
+  "screenshots.title": "See It in Action",
+
+  "underTheHood.title": "Under the Hood",
+  "underTheHood.daemon.title": "Go Daemon",
+  "underTheHood.daemon.desc": "Modular architecture with 5 pluggable modules, SQLite WAL storage, WebSocket pub-sub, token authentication.",
+  "underTheHood.spa.title": "React SPA",
+  "underTheHood.spa.desc": "React 19, Zustand state management, xterm.js 6 terminal emulation, Tailwind CSS 4.",
+  "underTheHood.electron.title": "Electron Shell",
+  "underTheHood.electron.desc": "Multi-window with tear-off/merge, system tray, browser pane memory management, native keyboard shortcuts.",
+  "underTheHood.hooks.title": "Hook System",
+  "underTheHood.hooks.desc": "9 Claude Code lifecycle events feed real-time status indicators, zero polling.",
+
+  "footer.openApp": "Open App",
+  "footer.version": "Version",
+
+  "lang.en": "EN",
+  "lang.zhTW": "中文",
+  "theme.dark": "Dark",
+  "theme.light": "Light"
+}

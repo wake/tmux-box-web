@@ -1,0 +1,46 @@
+{
+  "hero.tagline": "馴服你的 AI 終端機。",
+  "hero.subtitle": "基於 tmux 的平台化工作環境，為 AI Agent 時代打造 — 跨主機管理 session、即時追蹤 agent 狀態、斷線後無縫恢復。",
+  "hero.cta.app": "開始使用",
+  "hero.cta.github": "GitHub",
+
+  "features.title": "功能特色",
+  "features.sessions.title": "跨主機 Session",
+  "features.sessions.desc": "在任意主機安裝 daemon、加入 host，遠端的 tmux session 就會出現在本地分頁中 — 完整 PTY 中繼與自動 session 探索。",
+  "features.status.title": "Agent 狀態一目了然",
+  "features.status.desc": "分頁燈號顯示每個 agent 的即時狀態 — 執行中、等待輸入或錯誤。未讀標記和桌面通知讓你不用切換分頁就能掌握進度。",
+  "features.reconnect.title": "無縫重新連線",
+  "features.reconnect.desc": "基於 tmux。斷線、重新整理、筆電休眠 — 重新開啟頁面，所有分頁、分割和工作流程都還在原位。",
+  "features.upload.title": "拖曳檔案到遠端 Agent",
+  "features.upload.desc": "將圖片或文件拖曳到終端機視窗。檔案上傳到遠端主機後，路徑自動注入到 agent session — 一個動作完成跨主機檔案傳遞。",
+  "features.theme.title": "完整主題系統",
+  "features.theme.desc": "21 個語義設計 token、4 套內建主題、即時主題編輯器支援匯入匯出，以及完整的中英雙語支援與自訂語系功能。",
+
+  "howItWorks.title": "使用方式",
+  "howItWorks.step1.title": "安裝",
+  "howItWorks.step1.desc": "單一 Go 執行檔。tbox serve 啟動 daemon。tbox setup 自動設定 Claude Code hooks。",
+  "howItWorks.step2.title": "加入主機",
+  "howItWorks.step2.desc": "在 Web 介面中輸入 daemon 位址，每台主機自動探索其 tmux session。",
+  "howItWorks.step3.title": "開始工作",
+  "howItWorks.step3.desc": "分頁開啟。Agent 執行。通知送達。跨主機拖曳檔案。在任何裝置接續作業。",
+
+  "screenshots.title": "實際畫面",
+
+  "underTheHood.title": "技術架構",
+  "underTheHood.daemon.title": "Go Daemon",
+  "underTheHood.daemon.desc": "模組化架構，5 個可插拔模組、SQLite WAL 儲存、WebSocket pub-sub、token 驗證。",
+  "underTheHood.spa.title": "React SPA",
+  "underTheHood.spa.desc": "React 19、Zustand 狀態管理、xterm.js 6 終端機模擬、Tailwind CSS 4。",
+  "underTheHood.electron.title": "Electron Shell",
+  "underTheHood.electron.desc": "多視窗 tear-off/merge、系統匣、瀏覽器面板記憶體管理、原生鍵盤快捷鍵。",
+  "underTheHood.hooks.title": "Hook 系統",
+  "underTheHood.hooks.desc": "9 個 Claude Code 生命週期事件驅動即時狀態指標，零輪詢。",
+
+  "footer.openApp": "開始使用",
+  "footer.version": "版本",
+
+  "lang.en": "EN",
+  "lang.zhTW": "中文",
+  "theme.dark": "深色",
+  "theme.light": "淺色"
+}
