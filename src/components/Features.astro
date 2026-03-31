@@ -37,16 +37,16 @@ const features = [
   },
 ]
 ---
-<section class="px-6 py-24 max-w-5xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-16" data-i18n="features.title">Features</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<section class="px-6 py-20 max-w-5xl mx-auto">
+  <h2 class="text-2xl font-bold mb-10" data-i18n="features.title">Features</h2>
+  <div class="space-y-0 divide-y divide-border-subtle">
     {features.map((f) => (
-      <div class="p-6 rounded-xl bg-surface-secondary border border-border-subtle">
-        <div class="text-2xl mb-4 w-10 h-10 rounded-lg bg-accent-muted flex items-center justify-center text-accent">
-          {f.icon}
+      <div class="flex items-start gap-4 py-5">
+        <span class="text-accent text-lg font-mono shrink-0 w-6 text-center mt-0.5">{f.icon}</span>
+        <div class="min-w-0">
+          <h3 class="text-base font-semibold" data-i18n={f.titleKey}>{f.titleDefault}</h3>
+          <p class="text-text-secondary text-sm leading-relaxed mt-1" data-i18n={f.descKey}>{f.descDefault}</p>
         </div>
-        <h3 class="text-lg font-semibold mb-2" data-i18n={f.titleKey}>{f.titleDefault}</h3>
-        <p class="text-text-secondary text-sm leading-relaxed" data-i18n={f.descKey}>{f.descDefault}</p>
       </div>
     ))}
   </div>

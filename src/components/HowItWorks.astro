@@ -6,6 +6,7 @@ const steps = [
     titleDefault: 'Install',
     descKey: 'howItWorks.step1.desc',
     descDefault: 'Single Go binary. tbox serve starts the daemon. tbox setup wires up Claude Code hooks.',
+    cmd: '$ tbox serve',
   },
   {
     num: '2',
@@ -13,6 +14,7 @@ const steps = [
     titleDefault: 'Add Hosts',
     descKey: 'howItWorks.step2.desc',
     descDefault: 'Point the web UI at your daemon address. Each host auto-discovers its tmux sessions.',
+    cmd: '$ tbox setup',
   },
   {
     num: '3',
@@ -20,19 +22,25 @@ const steps = [
     titleDefault: 'Work',
     descKey: 'howItWorks.step3.desc',
     descDefault: 'Tabs open. Agents run. Notifications arrive. Drag files across machines. Pick up on any device.',
+    cmd: null,
   },
 ]
 ---
-<section class="px-6 py-24 max-w-5xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-16" data-i18n="howItWorks.title">How It Works</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<section class="px-6 py-20 max-w-5xl mx-auto">
+  <h2 class="text-2xl font-bold mb-10" data-i18n="howItWorks.title">How It Works</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-border-subtle rounded overflow-hidden border border-border-subtle">
     {steps.map((s) => (
-      <div class="text-center">
-        <div class="w-12 h-12 rounded-full bg-accent text-text-inverse font-bold text-xl flex items-center justify-center mx-auto mb-4">
-          {s.num}
+      <div class="bg-surface-primary p-6">
+        <div class="flex items-baseline gap-2 mb-3">
+          <span class="text-accent font-mono text-sm font-bold">{s.num}.</span>
+          <h3 class="text-base font-semibold" data-i18n={s.titleKey}>{s.titleDefault}</h3>
         </div>
-        <h3 class="text-lg font-semibold mb-2" data-i18n={s.titleKey}>{s.titleDefault}</h3>
         <p class="text-text-secondary text-sm leading-relaxed" data-i18n={s.descKey}>{s.descDefault}</p>
+        {s.cmd && (
+          <code class="block mt-3 text-xs font-mono text-accent bg-surface-tertiary px-3 py-1.5 rounded border border-border-subtle">
+            {s.cmd}
+          </code>
+        )}
       </div>
     ))}
   </div>

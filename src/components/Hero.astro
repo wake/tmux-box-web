@@ -1,35 +1,37 @@
 ---
 ---
-<section class="relative px-6 py-24 md:py-32 max-w-5xl mx-auto text-center">
-  <h1 class="text-4xl md:text-6xl font-bold tracking-tight" data-i18n="hero.tagline">
-    Tame your AI terminals.
-  </h1>
-  <p class="mt-6 text-lg md:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed" data-i18n="hero.subtitle">
-    A tmux-based workspace for the AI agent era — manage sessions across machines, track agent status at a glance, and never lose context when connections drop.
-  </p>
-  <div class="mt-10 flex items-center justify-center gap-4">
-    <a
-      href="/app"
-      class="px-6 py-3 rounded-lg bg-accent text-text-inverse font-medium hover:bg-accent-hover transition-colors"
-      data-i18n="hero.cta.app"
-    >
-      Open App
-    </a>
-    <a
-      href="https://github.com/wake/tmux-box"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="px-6 py-3 rounded-lg border border-border-default text-text-primary hover:bg-surface-hover transition-colors"
-      data-i18n="hero.cta.github"
-    >
-      GitHub
-    </a>
+<section class="relative px-6 py-16 md:py-24 max-w-5xl mx-auto">
+  <div class="max-w-3xl">
+    <h1 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight" data-i18n="hero.tagline">
+      <span class="text-text-muted select-none" aria-hidden="true">$ </span>Tame your AI terminals.
+    </h1>
+    <p class="mt-4 text-base md:text-lg text-text-secondary leading-relaxed max-w-2xl" data-i18n="hero.subtitle">
+      A tmux-based workspace for the AI agent era — manage sessions across machines, track agent status at a glance, and never lose context when connections drop.
+    </p>
+    <div class="mt-8 flex items-center gap-6">
+      <a
+        href="/app"
+        class="px-6 py-2.5 rounded bg-accent text-text-inverse font-medium hover:bg-accent-hover transition-colors text-sm"
+        data-i18n="hero.cta.app"
+      >
+        Open App
+      </a>
+      <a
+        href="https://github.com/wake/tmux-box"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-text-secondary hover:text-accent transition-colors text-sm font-medium"
+        data-i18n="hero.cta.github"
+      >
+        GitHub &rarr;
+      </a>
+    </div>
   </div>
-  <div class="mt-16">
+  <div class="mt-12">
     <img
       src="/screenshots/demo-connected.png"
       alt="tmux-box interface showing multi-tab terminal with session panel"
-      class="rounded-xl border border-border-subtle shadow-2xl mx-auto max-w-full"
+      class="rounded border border-border-default shadow-xl max-w-full"
     />
   </div>
 </section>
